@@ -7,7 +7,7 @@ https://github.com/intridea/omniauth.
 
 ## Before You Begin
 
-[TBD]
+Follow [cloud.gov's instructions for registering your application](https://docs.cloud.gov/apps/leveraging-authentication/)
 
 
 ## Using This Strategy
