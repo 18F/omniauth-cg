@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class Cg < OmniAuth::Strategies::OAuth2
       # Give your strategy a name.
-      option :name, 'myusa'
+      option :name, 'cloud.gov'
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
