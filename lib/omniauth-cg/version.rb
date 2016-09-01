@@ -1,5 +1,5 @@
 module Omniauth
-  module Myusa
-    VERSION = "0.0.1"
+  module Cg
+    VERSION = '0.0.1'.freeze
   end
 end

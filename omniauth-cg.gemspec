@@ -5,7 +5,7 @@ require 'omniauth-cg/version'
 
 Gem::Specification.new do |gem|
   gem.name = 'omniauth-cg'
-  gem.version = Omniauth::Myusa::VERSION
+  gem.version = Omniauth::Cg::VERSION
   gem.authors = ['Greg Gershman', 'Christopher Papazian', 'Robb Shecter']
   gem.email = ['robb.shecter@gsa.gov']
   gem.description = 'OmniAuth strategy for Cloud.gov.'
