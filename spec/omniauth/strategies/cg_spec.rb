@@ -10,12 +10,14 @@ describe OmniAuth::Strategies::Cg do
       expect(subject.options.name).to eq('cg')
     end
 
+    # URL from https://docs.cloud.gov/apps/leveraging-authentication/
     it 'should have correct site' do
-      expect(subject.options.client_options.site).to eq('https://cloud.gov')
+      expect(subject.options.client_options.site).to eq('https://login.cloud.gov/oauth/authorize')
     end
 
+    # URL from https://docs.cloud.gov/apps/leveraging-authentication/
     it 'should have correct token url' do
-      expect(subject.options.client_options.token_url).to eq('/oauth/authorize')
+      expect(subject.options.client_options.token_url).to eq('https://uaa.cloud.gov/oauth/token')
     end
   end
 end

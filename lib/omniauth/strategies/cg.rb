@@ -3,18 +3,15 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Cg < OmniAuth::Strategies::OAuth2
-      # Give your strategy a name.
       option :name, 'cg'
 
-      # This is where you pass the options you would pass when
-      # initializing your consumer from the OAuth gem.
-      option :client_options, site: 'https://alpha.my.usa.gov', token_url: '/oauth/authorize'
+      # URLs provided by cloud.gov here:
+      # https://docs.cloud.gov/apps/leveraging-authentication/
+      option :client_options, site: 'https://login.cloud.gov/oauth/authorize', token_url: 'https://uaa.cloud.gov/oauth/token'
 
-      # These are called after authentication has succeeded. If
-      # possible, you should try to set the UID without making
-      # additional calls (if the user id is returned with the token
-      # or as a URI parameter). This may not be possible with all
-      # providers.
+      # These are called after authentication has succeeded. If possible, you should try
+      # to set the UID without making additional calls (if the user id is returned with
+      # the token or as a URI parameter). This may not be possible with all providers.
       uid { raw_info['uid'] }
 
       info do
