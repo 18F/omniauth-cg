@@ -2,9 +2,9 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Myusa < OmniAuth::Strategies::OAuth2
+    class Cg < OmniAuth::Strategies::OAuth2
       # Give your strategy a name.
-      option :name, "myusa"
+      option :name, 'myusa'
 
       # This is where you pass the options you would pass when
       # initializing your consumer from the OAuth gem.
@@ -15,11 +15,11 @@ module OmniAuth
       # additional calls (if the user id is returned with the token
       # or as a URI parameter). This may not be possible with all
       # providers.
-      uid{ raw_info['uid'] }
+      uid { raw_info['uid'] }
 
       info do
         {
-          :email => raw_info['email']
+          email: raw_info['email']
         }
       end
 
@@ -32,7 +32,6 @@ module OmniAuth
       def raw_info
         @raw_info ||= access_token.get('/api/profile').parsed
       end
-
     end
   end
 end
