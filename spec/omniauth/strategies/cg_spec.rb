@@ -7,7 +7,7 @@ describe OmniAuth::Strategies::Cg do
 
   context 'client options' do
     it 'should have correct name' do
-      expect(subject.options.name).to eq('cloud.gov')
+      expect(subject.options.name).to eq('cg')
     end
 
     it 'should have correct site' do
