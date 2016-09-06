@@ -6,6 +6,10 @@ set :run, false
 set :raise_errors, true
 
 get '/' do
+  headers \
+    'Access-Control-Allow-Origin' => '*',
+    'Access-Control-Allow-Credentials' => 'true'
+
   content_type 'text/html'
   <<-END
 <html>
@@ -23,6 +27,9 @@ end
 get '/auth/cg/callback' do
   content_type 'application/json'
   MultiJson.encode(request.env)
+  headers \
+    'Access-Control-Allow-Origin' => '*',
+    'Access-Control-Allow-Credentials' => 'true'
 end
 
 get '/auth/failure' do
