@@ -1,26 +1,21 @@
-# OmniAuth::Strategies::Myusa
+# OmniAuth::Strategies::Cg
 
-This gem contains the MyUSA strategy for OmniAuth.
-
-MyUSA uses OAuth 2.0. To find out more information about MyUSA and how to create
-your own application visit the [developers](https://my.usa.gov/developer)
-section of MyUSA.
+This gem contains the Cloud.gov strategy for OmniAuth.
 
 View the OmniAuth 1.0 docs for more information about strategy implementation:
 https://github.com/intridea/omniauth.
 
 ## Before You Begin
 
-Sign in to [MyUSA](https://my.usa.gov/developer) and register an application.
-You will need to provide a redirect URI which is "YOUR_SITE/auth/myusa/callback"
-by default. Take note of your Consumer Key and Consumer Secret.
+Follow [cloud.gov's instructions for registering your application](https://docs.cloud.gov/apps/leveraging-authentication/)
+
 
 ## Using This Strategy
 
 First start by adding this gem to your Gemfile:
 
 ```ruby
-gem 'omniauth-myusa', git: 'https://github.com/18F/omniauth-myusa.git'
+gem 'omniauth-cg', git: 'https://github.com/18F/omniauth-cg.git'
 ```
 
 Next, tell OmniAuth about this provider. For a Rails app, your
@@ -28,14 +23,14 @@ Next, tell OmniAuth about this provider. For a Rails app, your
 
 ```ruby
 provider(
-  :myusa,
+  :cg,
   "CONSUMER_KEY",
   "CONSUMER_SECRET",
   scope: "profile.email tasks submit_forms notifications"
 )
 ```
 
-Replace CONSUMER_KEY and CONSUMER_SECRET with the appropriate values you obtained from [MyUSA](https://my.usa.gov/apps) earlier. Valid scopes are:
+Replace CONSUMER_KEY and CONSUMER_SECRET with the appropriate values you obtained from [Cloud.gov](#) earlier. Valid scopes are:
 - profile.email
 - profile.title
 - profile.first_name
@@ -64,7 +59,7 @@ An example auth hash available in `request.env['omniauth.auth']`:
 
 ```ruby
 {
-  "provider"=>"myusa",
+  "provider"=>"cg",
   "uid"=>"r03Ke0000000000FrqOOFlq0DeNc9q1QQQQQQQQC",
   "info"=>{"email"=>"johnq@bloggs.com"},
   "credentials"=>{"token"=>"3gnsgg14ymf54mquevfry38ao", "expires"=>false},

@@ -11,8 +11,8 @@ To set up a client application that points to a dev/staging version of MyUSA:
 
 1. Clone this repository locally and change to the `example` folder:
    ```bash
-   $ git clone https://github.com/18F/omniauth-myusa/
-   $ cd omniauth-myusa/example
+   $ git clone https://github.com/18F/omniauth-cg/
+   $ cd omniauth-cg/example
    ```
 
 1. Use `bundle` to install the necessary dependencies:
@@ -20,7 +20,7 @@ To set up a client application that points to a dev/staging version of MyUSA:
    $ bundle install
    ```
 
-1. Register a new client application with MyUSA at `https://my.usa.gov/oauth/applications`
+1. Register a new client application with cloud.gov. at `https://my.usa.gov/oauth/applications`
   1. Set **Url** to `http://localhost:9292`
   2. Set **Redirect Uri** to `http://localhost:9292/auth/myusa/callback`
 
